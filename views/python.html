@@ -1,0 +1,136 @@
+<html>
+<head>
+	<meta charset="utf-8">
+	<link href="/projet_defis/CSS/style-python.css" media="screen" rel="stylesheet" type="text/css">
+	<link href="https://cdn.jsdelivr.net/npm/bootstrap@5.1.3/dist/css/bootstrap.min.css" rel="stylesheet">
+	<title>Projet-python</title>
+</head>
+<body>
+	<!--Barre de navigation-->
+	<nav class="navbar navbar-dark bg-dark navbar-expand-md">
+		<div class="container">
+			<div class="collapse navbar-collapse" id="monMenuDeroulant">
+				<ul class="navbar-nav">
+					<li class="nav-item">
+						<a class="nav-link" href="/projet_defis/views/accueil.php">Accueil</a>
+					</li>
+					<li class="nav-item">
+						<a class="nav-link" href="/projet_defis/views/interface-bdd.php">Interface BDD</a>
+					</li>
+					<li class="nav-item">
+						<a class="nav-link" href="/projet_defis/views/alesi.html">Le projet Alesi</a>
+					</li>
+					<li class="nav-item">
+						<a class="nav-link" href="/projet_defis/views/sauvegarde56.html">Le projet Sauvegarde 56</a>
+					</li>
+					<li class="nav-item">
+						<a class="nav-link active" href="/projet_defis/views/python.html">Le projet Python</a>
+					</li>
+					<li class="nav-item">
+						<a class="nav-link" href="/projet_defis/views/mon_site.html">A propos de ce site</a>
+					</li>
+					<li class="nav-item" id="compte">
+						<a class="nav-link" href="/projet_defis/views/mon-compte.html">Mon compte</a>
+					</li>
+				</ul>
+			</div>
+		</div>
+	</nav>
+	<p id="pyth">Bienvenue dans le projet Python</p><br>
+	<br>
+	<h5>I. Présentation du contexte</h5>
+	<p>L'association Défis souhaite mettre en place un programme permettant de merger (fusionner) des fichiers conflictuel.<br></p><br>
+	<br>
+	<h6>1. Les cibles du programme</h6>
+	<p>Les utilisateurs du programme seront :<br>
+	- L'association Défis et ses partenaires<br>
+	Chacun de ces utilisateurs utilisent le serveur NextCloud pour accéder à des fichiers partagés.</p><br>
+	<br>
+	<h6>2. NextCloud, c'est quoi ?</h6>
+	<p>NextCloud est un logiciel libre de site d'hébergement de fichiers et une plateforme de collaboration.<br>
+	Grâce à son architecture ouverte, il est compatible avec l’ensemble des navigateurs et systèmes d’exploitation.<br>
+	<br>
+	NextCloud propose de multiples fonctionnalités : synchronisation des serveurs internes, partage automatique des fichiers,<br>
+	stockage sécurisé et chiffré de documents, etc. Il est possible de l’associer à certaines applications comme le calendrier,<br>
+	la messagerie, la gestion des tâches et des contacts, l’édition en ligne de fichiers, ou encore la prise de notes.</p><br>
+	<br>
+	<h6>3. Qu'est ce qu'un fichier conflictuel ?</h6>
+	<p>Le principe du conflit est simple: deux utilisateurs travaillent en même temps sur un même fichier.<br>
+	Pour conserver les 2 versions et ne pas perdre de données une version en conflit se génère.<br>
+	<br>
+	Plus précisement, quand un utilisateur ouvre un fichier Office, il est verrouillé par le Client de Synchronisation du serveur.<br>
+	Donc lorsqu'un autre collaborateur va ouvrir ce fichier il ne pourra le faire qu'en Lecture seule.<br>
+	<br>
+	La seule manière pour que deux utilisateurs puissent effectuer une modification en simultanée est<br>
+	que l'un soit connecté au serveur NextCloud et que l'autre soit en mode Hors-connexion (pas de connexion internet).<br>
+	<br>
+	<strong>Prenons un exemple :</strong> <u>Un premier utilisateur</u>, connecté au serveur NextCloud, va enregistrer une modification<br>
+	sur un fichier qui sera synchronisé sur le serveur.<br>
+	Au même moment, <u>un second utilisateur</u> (en mode Hors-connexion) va également modifier ce fichier.<br>
+	C'est une fois que le second utilisateur se connecte au serveur NextCloud, que le client de synchronisation<br>
+	fait le lien entre les deux fichiers et détecte une modification simultanée. Il va alors considérer<br>
+	ce deuxième fichier comme un fichier conflictuel et ne sera pas synchronisé sur le serveur<br>
+	<br></p><br>
+	<h6>4. Qu'est ce qu'un client de synchronisation ?</h6>
+	<p>La synchronisation est une action ou une étape. Elle consiste à dupliquer les données stockées en local sur un serveur dans le but<br>
+	de les faire correspondre au fil du temps. Ainsi, les informations sont constamment mises à jour.<br>
+	<br>
+	Quant au client de synchronisation, c'est un logiciel permettant de synchroniser automatiquement entre plusieurs ordinateurs<br>
+	les fichiers de toute une arborescence de dossiers.</p><br>
+	<hr style="height: 3px; color: #000;">
+	<br>
+	<br>
+	<h5>II. Description fonctionnelle et technique du programme</h5><br>
+	<h6>1. Le cahier des charges</h6>
+	<p><strong>Le besoin :</strong> créer un programme permettant de merger des fichiers en conflit<br>
+	<strong>Les cibles :</strong> l'association Défis et ses partenaires<br>
+	<strong>Langage de programmation utilisé :</strong> Python<br>
+	<strong>IDE utilisé :</strong> Visual Studio Code pour réaliser le programme en local</p><br>
+	<p><u>Missions principales :</u><br>
+	<strong>1.</strong> Localiser le dossier où seront manipulés les fichiers<br>
+	<strong>2.</strong> Mettre tous les fichiers de ce dossier dans une liste<br>
+	<strong>3.</strong> Chercher dans la liste de fichiers, les noms des fichiers comprenant "conflicted copy"<br>
+	<strong>4.</strong> Créer un message d'alerte pour l'utilisateur afin de le prévenir d'un conflit existant<br>
+	<strong>5.</strong> Créer une boîte de dialogue demandant à l'utilisateur s'il veut merger des fichiers<br>
+	<strong>6.</strong> Trouver une solution pour sélectionner le fichier source et le fichier en conflit<br>
+	<strong>7.</strong> Créer un nouveau fichier ayant le contenu du fichier source et le contenu du fichier en conflit grâce au merge<br>
+	<strong>8.</strong> Créer un élément séparateur dans le troisième fichier pour indiquer quel est le contenu 1 et quel est le contenu 2<br>
+	<strong>9.</strong> Vérifier que le nouveau fichier sera placé dans le répertoire souhaité<br>
+	<br></p>
+	<p><u>Missions annexes :</u><br>
+	<strong>10.</strong> Pouvoir merger d'autres format de fichier en plus de l'extension .txt (expl docx, etc ..)<br>
+	<strong>11.</strong> Trouver une solution pour que le contenu du fichier source et le contenu du fichier en conflit s'implante bien dans le troisième fichier (pas de doublons)<br>
+	<strong>12.</strong> Mise en pré-prod<br></p>
+	<p>Temps estimé : 3 semaines pour les missions principales (du 29/11/2021 au 17/12/2021)</p><br>
+	<br>
+	<br>
+	<h6>2. Le langage Python</h6><br>
+	<div id="logo_python"><img alt="logo python" src="/projet_defis/Images/img_python/logopython.png"></div><br>
+	<p>Python est un langage de programmation puissant et facile à apprendre. Il est idéal pour l'écriture de scripts et le développement<br>
+	rapide d'applications dans de nombreux domaines et sur la plupart des plateformes.<br>
+	<br>
+	<u>Les avantages d'utiliser le langage Python :</u><br>
+	- <strong>Bibliothèques étendues et très complètes</strong> ce qui permet de faire énormément de choses<br>
+	- <strong>Amélioration de la productivité</strong> (La simplicité du langage et les bibliothèques étendues permettent d'écrire moins et de faire plus de choses<br>
+	- <strong>Lisible</strong> (Python n'est pas un langage très verbeux, pas d'accolades pour définir les blocs et l'indentation est obligatoire)<br>
+	- <strong>Langage interprété</strong> (les instructions sont exécutées une par une, le débogage est plus facile que dans les langues compilées)</p><br>
+	<br>
+	<br>
+	<br>
+	<h6>3. Diagramme d'état</h6>
+	<div id="diagramme"><img alt="diagramme d'état" src="/projet_defis/Images/img_python/diagramme_etat.png"></div><br>
+	<br>
+	<br>
+	<br>
+	<br>
+	<br>
+	<br>
+	<!--Partie script du programme Python (images)-->
+	<h6>4. Script Python</h6>
+	<div id="image_script"><img alt="script python partie 1" src="/projet_defis/Images/img_python/python1.png"> <img alt="script python partie 2" src="/alesi/Images/img_python/python2.png"> <img alt="script python partie 3" src="/alesi/Images/img_python/python3.png"> <img alt="script python partie 4" src="/alesi/Images/img_python/python4.png"></div><br>
+	<br>
+	<br>
+	<p style="font-style: italic; font-size: 20px;"><strong>Finir par une démonstration du programme !</strong></p><br>
+	<br>
+</body>
+</html>

@@ -1,0 +1,79 @@
+<html>
+<head>
+	<meta charset="utf-8">
+	<link href="/projet_defis/CSS/style-mon-compte.css" media="screen" rel="stylesheet" type="text/css">
+	<link href="https://cdn.jsdelivr.net/npm/bootstrap@5.1.3/dist/css/bootstrap.min.css" rel="stylesheet">
+	<title></title>
+</head>
+<body>
+	<nav class="navbar navbar-dark bg-dark navbar-expand-md">
+		<div class="container">
+			<div class="collapse navbar-collapse" id="monMenuDeroulant">
+				<ul class="navbar-nav">
+					<li class="nav-item">
+						<a class="nav-link" href="/projet_defis/views/accueil.php">Accueil</a>
+					</li>
+					<li class="nav-item">
+						<a class="nav-link" href="/projet_defis/views/interface-bdd.php">Interface BDD</a>
+					</li>
+					<li class="nav-item">
+						<a class="nav-link" href="/projet_defis/views/alesi.html">Le projet Alesi</a>
+					</li>
+					<li class="nav-item">
+						<a class="nav-link" href="/projet_defis/views/sauvegarde56.html">Le projet Sauvegarde 56</a>
+					</li>
+					<li class="nav-item">
+						<a class="nav-link" href="/projet_defis/views/python.html">Le projet Python</a>
+					</li>
+					<li class="nav-item">
+						<a class="nav-link" href="/projet_defis/views/mon_site.html">A propos de ce site</a>
+					</li>
+					<li class="nav-item" id="compte">
+						<a class="nav-link active" href="/projet_defis/views/mon-compte.html">Mon compte</a>
+					</li>
+				</ul>
+			</div>
+		</div>
+	</nav>
+	<p id="h1">Que souhaitez-vous faire ?</p>
+	<p></p>
+	<div id="container2">
+		<!--Création d'une boite de dialogue de confirmation avec Javascript pour la suppression du compte-->
+		<script type="text/javascript">
+		          
+		   function verifSuppression(){
+		          var retVal = confirm("Etes-vous sûr de vouloir supprimer le compte ?");
+		          if( retVal == true ){
+		          //ici vous pouvez mettre votre en cas de confirmation
+		             //moi j'affiche une boite d'alerte
+		                alert("Compte supprimé avec succès !");
+		                window.location.replace("/projet_defis/models/suppression-profil.php");
+		                     return true;
+		                  }
+		                     
+		          else{
+		                return false;
+		                     
+		             }
+		          }
+		          
+		</script> <!--Création d'une boite de dialogue de confirmation avec Javascript pour la déconnexion-->
+		<script type="text/javascript">
+		          
+		  function verifDeconnexion(){
+		         var retVal = confirm("Etes-vous sûr de vouloir vous déconnecter ?");
+		         if( retVal == true ){
+		               window.location.replace("/projet_defis/controllers/deconnexion.php");
+		                    return true;
+		                 }
+		                    
+		         else{
+		               return false;
+		                    
+		            }
+		         }
+		         
+		</script> <button class="btn btn-outline-secondary" id="bouton1" onclick="verifSuppression();" type="button">Supprimer mon compte</button> <button class="btn btn-outline-secondary" id="bouton2" onclick="window.location.href = 'modification-profil.html';" type="button">Modifier mon profil</button> <button class="btn btn-outline-secondary" id="bouton3" onclick="verifDeconnexion();" type="button">Déconnexion</button>
+	</div>
+</body>
+</html>

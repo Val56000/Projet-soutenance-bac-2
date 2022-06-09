@@ -1,0 +1,42 @@
+body {
+	background: linear-gradient(30deg, rgb(122, 121, 121), white 60%, rgb(121, 119, 119));
+	width: 100%;
+	height: auto;
+}
+.navbar-nav {
+	font-size: 17px;
+	margin-left: auto;
+	margin-right: auto;
+}
+/*Retrait de la bordure droite du dernier item du menu*/
+#compte {
+	border-right: none;
+}
+/*bordures ajoutés au menu pour chaque item*/
+.navbar-nav li {
+	border-right: 1px solid whitesmoke;
+	padding-top: 0px;
+	margin-top: 0px;
+}
+/*animation titre "Bienvenue dans l'interface de lecture de données*/
+#titre {
+	margin-top: 50px;
+	text-align: center;
+	animation: apparition 0.8s ease-out;
+	text-shadow: 0.1em 0.1em 0.5em rgb(92, 92, 89);
+	text-align: center;
+	font-style: italic;
+	margin-top: 10px;
+	font-size: 25px;
+	color: #000;
+}
+@keyframes apparition {
+	from {
+		opacity: 0;
+		transform: translateY(-100px);
+	}
+	to {
+		opacity: 1;
+		transform: translateY(0px);
+	}
+}

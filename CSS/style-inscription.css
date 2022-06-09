@@ -1,0 +1,56 @@
+body {
+	background: linear-gradient(30deg, blue, white, blue);
+	width: auto;
+	height: auto;
+}
+/*bloc container*/
+#container {
+	width: 400px;
+	margin: 0 auto 150px;
+	margin-top: 5%;
+}
+/*style du formulaire*/
+form {
+	border-radius: 50px;
+	width: 100%;
+	height: auto;
+	padding: 30px;
+	border: 1px solid #f1f1f1;
+	background: white;
+	box-shadow: 0 0 20px 0 rgba(0, 0, 0, 0.2), 0 5px 5px 0 rgba(0, 0, 0, 0.24);
+}
+/*style des champs du formulaire*/
+input[type=text], input[type=password] {
+	width: 100%;
+	padding: 12px 20px;
+	margin: 8px 0;
+	display: inline-block;
+	border: 1px solid black;
+	box-sizing: border-box;
+}
+/*style du bouton submit*/
+input[type=submit] {
+	background: linear-gradient(30deg, blue, white 30%, blue);
+	color: #000;
+	padding: 14px 20px;
+	margin: 8px 0;
+	border: none;
+	cursor: pointer;
+	width: 100%;
+}
+/*style du bouton submit au survol de la souris*/
+input[type=submit]:hover {
+	background-color: rgb(201, 224, 213);
+	color: black;
+	border: 1px solid #53af57;
+	font-weight: bold;
+}
+/*style du titre du formulaire*/
+#container h1 {
+	width: 38%;
+	margin: 0 auto;
+	padding-bottom: 10px;
+	font-size: 20px;
+	text-decoration: underline 1.5px;
+	text-align: center;
+}

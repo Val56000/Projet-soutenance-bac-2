@@ -1,0 +1,26 @@
+<html>
+<head>
+	<meta charset="utf-8">
+	<link href="/projet_defis/CSS/style-modification.css" media="screen" rel="stylesheet" type="text/css">
+	<title></title>
+</head>
+<body>
+	<div id="container">
+		<!-- zone de connexion -->
+		<form action="/projet_defis/models/modifier-profil.php" method="post">
+			<h1>Modifier le profil</h1>
+            <label><b>Prenom</b></label> <input name="prenom" placeholder="Expl : Valentin" required="" type="text">
+            <label><b>Nom</b></label> <input name="nom" placeholder="Expl : Nom de famille" required="" type="text">
+            <label><b>Téléphone</b></label> <input name="tel" placeholder="Expl : 06********" required="" type="text">
+            <label><b>E-mail</b></label> <input name="mail" placeholder="Expl : ****@eni-campus.fr" required="" type="text"> 
+            <label><b>Nom d'utilisateur</b></label> <input name="username" placeholder="Expl : ****" required="" type="text"> 
+            <label><b>Mot de passe</b></label> <input name="password" placeholder="Expl : ****" required="" type="password"> 
+            <label><b>Retaper le mot de passe</b></label> <input name="password2" placeholder="Expl : ****" required="" type="password"> 
+            <input type="submit" value='Modifier'>
+			<div class="retour-connexion">
+				<a href="mon-compte.html">Retour</a>
+			</div>
+		</form>
+	</div>
+</body>
+</html>

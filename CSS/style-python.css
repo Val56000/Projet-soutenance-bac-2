@@ -1,0 +1,70 @@
+body {
+	background: linear-gradient(30deg, rgb(228, 225, 225), white 60%, rgb(219, 216, 216));
+	width: 100%;
+	height: auto;
+}
+.navbar-nav {
+	font-size: 17px;
+	margin-left: auto;
+	margin-right: auto;
+}
+/*barre de navigation - enlever la bordure droite du dernier élément*/
+#compte {
+	border-right: none;
+}
+.navbar-nav li {
+	border-right: 1px solid whitesmoke;
+	padding-top: 0px;
+	margin-top: 0px;
+}
+h5 {
+	text-align: center;
+}
+h6 {
+	text-decoration: underline;
+	text-align: center;
+}
+p {
+	font-size: 14px;
+	text-align: center;
+}
+#logo_python img{
+	width: 150px;
+	display: flex;
+	justify-content: center;
+	text-align: center;
+}
+#logo_python{
+	display: flex;
+	justify-content: center;
+}
+#diagramme {
+	text-align: center;
+}
+#image_script {
+	justify-content: center;
+	align-items: center;
+	text-align: center;
+}
+/*texte Bienvenue dans le projet Python*/
+#pyth {
+	margin-top: 50px;
+	text-align: center;
+	animation: apparition 0.8s ease-out;
+	text-shadow: 0.1em 0.1em 0.5em rgb(92, 92, 89);
+	text-align: center;
+	font-style: italic;
+	margin-top: 10px;
+	font-size: 25px;
+	color: #000
+}
+@keyframes apparition {
+	from {
+		opacity: 0;
+		transform: translateY(-100px);
+	}
+	to {
+		opacity: 1;
+		transform: translateY(0px);
+	}
+}
